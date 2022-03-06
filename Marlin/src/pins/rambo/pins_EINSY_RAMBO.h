@@ -28,7 +28,7 @@
 #include "env_validate.h"
 
 #define BOARD_INFO_NAME       "Einsy Rambo"
-#define DEFAULT_MACHINE_NAME  "Prusa MK3"
+#define DEFAULT_MACHINE_NAME  "Modified Laser Printer"
 
 //#define MK3_FAN_PINS
 
@@ -41,8 +41,8 @@
 
 // TMC2130 Diag Pins (currently just for reference)
 #define X_DIAG_PIN                            64
-#define Y_DIAG_PIN                            69
-#define Z_DIAG_PIN                            68
+#define Y_DIAG_PIN                            68
+#define Z_DIAG_PIN                            69
 #define E0_DIAG_PIN                           65
 
 //
@@ -69,7 +69,7 @@
     #define Z_STOP_PIN                        11  // Y-MIN
     #define SERVO0_PIN                        10  // Z-MIN
   #else
-    #define Z_STOP_PIN                        10
+    #define Z_STOP_PIN                        Z_DIAG_PIN
   #endif
 
 #endif
@@ -96,15 +96,15 @@
 #define X_ENABLE_PIN                          29
 #define X_CS_PIN                              41
 
-#define Y_STEP_PIN                            36
-#define Y_DIR_PIN                             48
-#define Y_ENABLE_PIN                          28
-#define Y_CS_PIN                              39
+#define Y_STEP_PIN                            35
+#define Y_DIR_PIN                             47
+#define Y_ENABLE_PIN                          27
+#define Y_CS_PIN                              67
 
-#define Z_STEP_PIN                            35
-#define Z_DIR_PIN                             47
-#define Z_ENABLE_PIN                          27
-#define Z_CS_PIN                              67
+#define Z_STEP_PIN                            36
+#define Z_DIR_PIN                             48
+#define Z_ENABLE_PIN                          28
+#define Z_CS_PIN                              39
 
 #define E0_STEP_PIN                           34
 #define E0_DIR_PIN                            43
